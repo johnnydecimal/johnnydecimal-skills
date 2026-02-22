@@ -1,8 +1,11 @@
 # README
 
+> See [Johnny.Decimal > JDex](https://jdcm.al/11.05/) for background.
+
 This repository contains skills for use with your favourite LLM.
 
 # [`jdex`](/jdex)
+
 
 - Requires environment variable `JDEX_ROOT`.
   - This should point to the root of your JDex, e.g. your Obsidian vault's root.
