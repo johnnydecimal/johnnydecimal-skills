@@ -37,6 +37,13 @@ user-invocable: false
     - They should only be used in static systems where the ID layout is known ahead of time; otherwise they lock you in to a structure, which is undesirable in flexible systems.
   - This is an advanced concept that you should skip if unsure.
 
+# Extend-the-end
+
+- Optionally, an ID can be extended using a `+`.
+- E.g. `12.34 Title` can have a child, `12.34+ Sub-note`.
+- The user may choose to keep these extended entries in a subfolder.
+- The subfolder's name should start with the ID, e.g. `12.34*/12.34+ Sub-note`.
+
 # Jobs
 
 - One of the user's areas _might_ begin `J-`. This is their folder of **jobs**. Not all users will have one.

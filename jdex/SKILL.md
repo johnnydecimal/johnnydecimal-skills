@@ -24,4 +24,4 @@ description: Read and write to the user's JDex — their Johnny.Decimal index. U
 - At the start of a conversation, check for a `.johnnydecimal` file in or above the working directory.
 - If it exists, read it. The `id` field is the Johnny.Decimal project ID for this folder.
   - This is a statement of intent from the user. Unless directed otherwise, this is the JDex entry you should act on — read it, write to it, document in it. Do not go searching for other files or create new ones. The dotfile is telling you: "this is the note."
-- If it doesn't exist, don't mention it.
+- If it doesn't exist and the user hasn't provided an ID, ask them for one. Do not guess.
