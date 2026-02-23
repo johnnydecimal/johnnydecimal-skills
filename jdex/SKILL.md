@@ -24,4 +24,5 @@ description: Read and write to the user's JDex — their Johnny.Decimal index. U
 - At the start of a conversation, check for a `.johnnydecimal` file in or above the working directory.
 - If it exists, read it. The `id` field is the Johnny.Decimal project ID for this folder.
   - This is a statement of intent from the user. Unless directed otherwise, this is the JDex entry you should act on — read it, write to it, document in it. Do not go searching for other files or create new ones. The dotfile is telling you: "this is the note."
-- If it doesn't exist and the user hasn't provided an ID, ask them for one. Do not guess.
+- If it doesn't exist, check the current folder name for a Johnny.Decimal ID in square brackets, e.g. `my-project [12.34]` or `some-repo [J-0131]`. If found, treat it as the ID for this folder — same as if a dotfile had specified it.
+- If neither a dotfile nor a bracketed ID exists and the user hasn't provided an ID, STOP. Ask the user: "Which JDex ID should I use?" Do not search the JDex for a match, do not try to infer the ID from the project name, and do not continue until the user gives you one.
