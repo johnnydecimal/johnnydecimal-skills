@@ -44,13 +44,14 @@ user-invocable: false
 - The user may choose to keep these extended entries in a subfolder.
 - The subfolder's name should start with the ID, e.g. `12.34*/12.34+ Sub-note`.
 
-# Jobs
+# Expand-an-area
 
-- One of the user's areas _might_ begin `J-`. This is their folder of **jobs**. Not all users will have one.
-- Each job has an ID in the range `J-0000` to `J-9999`.
-  - E.g. `J-0131 Some project name`.
-- Jobs live in the `J-*` area folder, possibly in a subfolder. To find a job, glob with e.g. `**/J-0131*` from `$JDEX_ROOT` (substitute the actual job ID). See the `jdex` skill for how to resolve `$JDEX_ROOT`.
-- In all other respects (note structure, metadata, linking) jobs follow the same rules as regular IDs.
+- Optionally, IDs can take the form of 5 digits, e.g. `90001`.
+- There is no dot separator — `90001` is the full ID.
+- These IDs live directly inside an area and are not nested in a category.
+- The area uses a 5-digit range format rather than the standard 2-digit range, e.g. `90000-99999`.
+- Folder structure: `90000-99999/90001 Title`.
+- JDex entry: `90001 Title.md`, following the same note format as regular IDs.
 
 # The Johnny.Decimal index or JDex
 
