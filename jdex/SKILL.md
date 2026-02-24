@@ -33,3 +33,35 @@ description: Read and write to the user's JDex — their Johnny.Decimal index. U
 - If it exists, read it. The `id` field is the active ID for this folder.
   - This is a statement of intent from the user. It means: this is the note. Read it, write to it, document in it. Do not go searching for other files or create new ones.
 - If no dotfile or bracketed ID exists and the user hasn't provided an ID, STOP. Ask the user: "Which JDex ID should I use?" Do not search the JDex for a match, do not infer from the project name, and do not continue until the user gives you one.
+
+# Obsidian
+
+- You should check whether the user's JDex is an Obsidian vault. There will be a `.obsidian` folder at the root.
+- If so, check for the `obsidian` command using `command -v obsidian`. It allows you to manipulate the vault directly.
+- Useful commands are listed below. `obsidian help` lists all commands.
+
+## `obsidian backlinks`
+
+- List backlinks to a file (default: active file).
+- Example: `obsidian backlinks file="12.34 Some title.md"`
+
+```
+file=<name>        # target file name
+path=<path>        # target file path
+
+counts             # include link counts
+total              # return backlink count
+format=json|tsv|csv  # output format (default: tsv)
+```
+
+## `obsidian links`
+
+- List outgoing links from a file (default: active file).
+- Example: `obsidian links file="12.34 Some title.md"`
+
+```
+file=<name>        # file name
+path=<path>        # file path
+
+total              # return link count
+```
